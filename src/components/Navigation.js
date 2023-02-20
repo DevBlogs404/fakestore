@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import cartLogo from "../images/cart.png";
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux";
 
 const Navigation = () => {
-  const result = useSelector((state)=>{ return state.cartData });
-  // console.log(result)
+  const result = useSelector((state) => {
+    return state.cartData;
+  });
   return (
     <div className=" w-full flex items-center justify-between bg-gray-500 text-white h-30 p-8 ">
       <div>
@@ -29,7 +30,9 @@ const Navigation = () => {
           className="ml-8 bg-yellow-500 rounded-full h-10 w-10  flex items-center justify-center hover:bg-gray-400"
           to="/cart"
         >
-          <span className="absolute top-6 right-8 text-black text-2xl">{result.length}</span>
+          <span className="absolute top-6 right-8 text-black text-2xl">
+            {result.length}
+          </span>
           <img src={cartLogo} alt="cart" />
         </Link>
       </div>

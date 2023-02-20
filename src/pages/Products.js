@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Product from "../components/Product";
 import { useSelector, useDispatch } from "react-redux";
@@ -6,12 +6,11 @@ import { productList } from "../redux/productAction";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state) => 
-    state.productData
- );
+  const data = useSelector((state) => state.productData);
 
   useEffect(() => {
-        dispatch(productList())    
+    dispatch(productList());
+    // eslint-disable-next-line
   }, []);
 
   return (

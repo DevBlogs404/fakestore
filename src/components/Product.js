@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart, emptyCart, removeFromCart } from "../redux/actions";
+import { addToCart } from "../redux/actions";
 
 const Product = (props) => {
   const [isAdding, setIsAdding] = useState(false);
@@ -14,7 +14,6 @@ const Product = (props) => {
     setTimeout(() => {
       setIsAdding(false); // after 2 seconds the button color changes to yellow
     }, 1000);
-    // console.log("added");
   };
 
   return (
